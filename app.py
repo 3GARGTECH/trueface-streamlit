@@ -1,12 +1,16 @@
 import streamlit as st
+from PIL import Image
 
-st.set_page_config(page_title="TrueFace – Fake or Real?", layout="centered")
+# Page setup
+st.set_page_config(page_title="TrueFace: Detect the Fake", layout="centered")
 
-st.title("🛡️ TrueFace: Detect the Fake, Protect the Truth")
-st.markdown("Welcome to **TrueFace**, your interactive quiz to spot fake images and deepfakes online.")
+# Load and display the correct logo
+image = Image.open("SVSTO.png")
+st.image(image, width=250)
 
-if st.button("Start Quiz"):
-    st.info("Feature coming soon! In the final version, you'll see deepfake vs. real image comparisons.")
+# Title and slogan
+st.markdown("<h1 style='color:#4B2E83; font-family:Arial;'>TrueFace</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='color:#FF4500; font-family:Arial;'>DETECT THE FAKE. PROTECT THE TRUTH.</h3>", unsafe_allow_html=True)
 
-st.markdown("---")
-st.caption("🔐 No account needed | 🌍 GDPR-compliant | 📱 Mobile friendly")
+# Optional introduction text
+st.write("Welcome to TrueFace — an interactive cybersecurity awareness tool that helps you detect fake media and stay digitally safe. Start the quiz to test your skills!")
